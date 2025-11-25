@@ -1,12 +1,12 @@
 :root {
   --bg: #f0f4f8;
   --card: #ffffff;
-  --accent: #4a00e0; /* Morado principal */
-  --color-1: #ff6b6b; /* Rojo/Rosa */
-  --color-2: #4ecdc4; /* Turquesa */
-  --color-3: #feca57; /* Amarillo/Naranja */
-  --color-4: #1dd1a1; /* Verde */
-  --color-5: #54a0ff; /* Azul */
+  --accent: #4a00e0; 
+  --color-1: #ff6b6b; 
+  --color-2: #4ecdc4; 
+  --color-3: #feca57; 
+  --color-4: #1dd1a1; 
+  --color-5: #54a0ff; 
 }
 
 * {
@@ -18,7 +18,7 @@
 body {
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
   min-height: 100vh;
-  background: linear-gradient(135deg, #1e272e, #485460); /* Fondo oscuro y llamativo */
+  background: linear-gradient(135deg, #1e272e, #485460); 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,7 +28,7 @@ body {
 .wrap {
   width: 100%;
   max-width: 1200px;
-  background: #2f3640; /* Fondo de wrap oscuro */
+  background: #2f3640; 
   border-radius: 25px;
   padding: 40px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
@@ -37,13 +37,13 @@ body {
 .main-title {
   font-size: 36px;
   margin-bottom: 10px;
-  color: #ffffff; /* Título blanco */
+  color: #ffffff; 
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 p.lead {
-  color: #a4b0be; /* Texto plomo claro */
+  color: #a4b0be; 
   margin-bottom: 30px;
   text-align: center;
   font-size: 1.1em;
@@ -58,7 +58,7 @@ p.lead {
 .card {
   border-radius: 15px;
   padding: 25px;
-  background: #3c4652; /* Fondo de tarjeta más oscuro */
+  background: #3c4652; 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
@@ -109,7 +109,6 @@ p.lead {
 .btn-4 { background: linear-gradient(45deg, var(--color-4), #00b894); }
 .btn-5 { background: linear-gradient(45deg, var(--color-5), #2e86de); }
 
-/* Estilos para la nueva navegación */
 .main-header {
   margin-bottom: 30px;
   border-bottom: 2px solid #485460;
