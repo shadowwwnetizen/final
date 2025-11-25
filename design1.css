@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, system-ui, Arial;
+  background: linear-gradient(180deg, #f7edea, #f1f5f9);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.phone {
+  width: 360px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 26px;
+  padding: 18px;
+  box-shadow: 0 20px 40px rgba(20, 30, 60, 0.12);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.top .title {
+  font-weight: 700;
+  font-size: 18px;
+  color: #0f172a;
+}
+
+.menu,
+.cart {
+  background: rgba(15, 23, 42, 0.06);
+  border: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.food-card {
+  background: linear-gradient(180deg, #ffffff, #fff);
+  padding: 10px;
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(12, 18, 30, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.food-card img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.food-card .info h3 {
+  font-size: 15px;
+  margin-bottom: 4px;
+  color: #0f172a;
+}
+
+.food-card .info p {
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.precio {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.food-card.small {
+  padding: 14px;
+  align-items: flex-start;
+}
+
+.food-card.small .circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #fff, #f3f4f6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  box-shadow: 0 6px 12px rgba(12, 18, 30, 0.05);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 14px;
+  padding: 10px;
+  background: rgba(15, 23, 42, 0.05);
+  border-radius: 12px;
+}
+
+.bottom a {
+  color: #0f172a;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+@media (max-width: 420px) {
+  .phone {
+    width: 92vw;
+  }
+}
+
+.small-food-img {
+  width: 100%;
+  height: 80px; 
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.food-card.small img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}

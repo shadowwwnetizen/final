@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diseño 5 - Panel de Pagos</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Estilos específicos para el Diseño 5 */
+    .design-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 2fr 1fr; /* Columna principal y barra lateral */
+      gap: 30px;
+    }
+    .main-content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .sidebar {
+      padding: 20px;
+    }
+    .card-design5 {
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+    .card-design5.transfer-card {
+      text-align: center;
+    }
+    .card-design5.transfer-card img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+    .card-design5.transfer-card strong {
+      display: block;
+      font-size: 1.1em;
+      margin-bottom: 5px;
+    }
+    .card-design5.transfer-card .amount {
+      font-size: 1.5em;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .balance-section {
+      grid-column: 1 / -1;
+      padding: 20px;
+    }
+    .balance-section h2 {
+      font-size: 2.5em;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    .balance-section .chart-placeholder {
+      height: 200px;
+      background: #f0f0f0;
+      border-radius: 10px;
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+    }
+    .history-section {
+      grid-column: 1 / -1;
+      margin-top: 20px;
+    }
+    .history-section h3 {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+    }
+    .history-item {
+      display: flex;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .history-item:last-child {
+      border-bottom: none;
+    }
+    .history-item img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+    .history-item .details {
+      flex-grow: 1;
+    }
+    .history-item .status {
+      font-weight: 600;
+      color: green;
+    }
+    .sidebar .card-design5 {
+      margin-bottom: 20px;
+    }
+    .sidebar .card-design5.credit-card {
+      background: linear-gradient(135deg, #4c4c4c, #222222);
+      color: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    .sidebar .card-design5.credit-card .number {
+      font-size: 1.5em;
+      letter-spacing: 3px;
+      margin: 15px 0;
+    }
+    .sidebar .card-design5.credit-card .logo {
+      text-align: right;
+      font-weight: 700;
+      font-size: 1.2em;
+    }
+    .sidebar .activity-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .sidebar .activity-item:last-child {
+      border-bottom: none;
+    }
+    .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+    }
+    .header-nav a {
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    .header-nav a:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-nav">
+    <span>Diseño 5 - Panel de Pagos</span>
+    <a href="index.html">← Volver a la Galería Principal</a>
+  </div>
+  <div class="design-container">
+    <div class="main-content">
+      <div class="card-design5 transfer-card">
+        <img src="img/icon_transfer.png" alt="Icono de transferencia">
+        <strong>Transferencia por número de tarjeta</strong>
+        <div class="amount">$1200</div>
+      </div>
+      <div class="card-design5 transfer-card">
+        <img src="img/icon_transfer.png" alt="Icono de transferencia">
+        <strong>Transferencias a otros bancos</strong>
+        <div class="amount">$150</div>
+      </div>
+      <div class="card-design5 transfer-card">
+        <img src="img/icon_bank.png" alt="Icono del banco">
+        <strong>Transferencia dentro del mismo banco</strong>
+        <div class="amount">$1500</div>
+      </div>
+      <div class="card-design5 transfer-card">
+        <img src="img/icon_transfer.png" alt="Icono de transferencia">
+        <strong>Transferencia a otro banco</strong>
+        <div class="amount">$1500</div>
+      </div>
+
+      <div class="card-design5 balance-section">
+        <h2>Saldo $1500</h2>
+        <small>ÚLTIMOS 60 DÍAS</small>
+        <div class="chart-placeholder">
+          Gráfico de Barras de Balance (FEBRERO - NOVIEMBRE)
+        </div>
+      </div>
+
+      <div class="card-design5 history-section">
+        <h3>Historial</h3>
+        <small>Transacciones de los últimos 6 meses</small>
+        <div class="history-item">
+          <img src="img/user_avatar.png" alt="Foto de usuario">
+          <div class="details">
+            <strong>Seguro de automóvil</strong>
+            <small>10:42:21 AM</small>
+          </div>
+          <span>$350.00</span>
+          <span class="status" style="color: green; margin-left: 10px;">Completado</span>
+        </div>
+        <div class="history-item" style="background-color: #f5f5f5;">
+          <img src="img/user_avatar.png" alt="Foto de usuario">
+          <div class="details">
+            <strong>Préstamo</strong>
+            <small>12:42:00 PM</small>
+          </div>
+          <span>$1200.00</span>
+          <span class="status" style="color: green; margin-left: 10px;">Completado</span>
+        </div>
+        <div class="history-item">
+          <img src="img/user_avatar.png" alt="Foto de usuario">
+          <div class="details">
+            <strong>Pago en línea</strong>
+            <small>10:42:21 AM</small>
+          </div>
+          <span>$150.00</span>
+          <span class="status" style="color: green; margin-left: 10px;">Completado</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div class="card-design5 credit-card">
+        <div class="logo">Mastercard</div>
+        <div class="number">4562 1122 4595 7852</div>
+        <small>TITULAR</small>
+        <strong>Gabriel Álvaro</strong>
+      </div>
+
+      <div class="card-design5">
+        <h3>Actividades Recientes</h3>
+        <small>02 Mar 2021</small>
+        <div class="activity-item">
+          <span>Factura de agua</span>
+          <strong>$120</strong>
+        </div>
+        <div class="activity-item">
+          <span>Salario</span>
+          <strong>$4500</strong>
+        </div>
+        <div class="activity-item">
+          <span>Factura de electricidad</span>
+          <strong>$150</strong>
+        </div>
+        <div class="activity-item">
+          <span>Factura de Internet</span>
+          <strong>$60</strong>
+        </div>
+      </div>
+
+      <div class="card-design5">
+        <h3>Próximos Pagos</h3>
+        <small>13 Mar 2021</small>
+        <div class="activity-item">
+          <span>Alquiler de la vivienda</span>
+          <strong>$1500</strong>
+        </div>
+        <div class="activity-item">
+          <span>Seguro de automóvil</span>
+          <strong>$150</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

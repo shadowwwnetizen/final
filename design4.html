@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diseño 4 - Dashboard de Gastos</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Estilos específicos para el Diseño 4 */
+    .design-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .design-card {
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+    .design-card.full-width {
+      grid-column: 1 / -1;
+    }
+    .design-card.large-area {
+      grid-column: span 2;
+    }
+    .design-card.purple {
+      background: linear-gradient(135deg, #6f42c1, #8a2be2);
+      color: white;
+    }
+    .design-card h2 {
+      font-size: 1.2em;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .design-card.purple h2 {
+      color: white;
+    }
+    .expense-value {
+      font-size: 3em;
+      font-weight: 700;
+      margin: 10px 0;
+      color: #333;
+    }
+    .expense-value small {
+      font-size: 0.5em;
+      font-weight: 400;
+      vertical-align: top;
+      margin-right: 5px;
+    }
+    .expense-change {
+      color: #dc3545;
+      font-weight: 600;
+    }
+    .btn-view-all {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+    }
+    .chart-ring {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: conic-gradient(#ffc107 0% 70%, #17a2b8 70% 100%);
+      margin: 0 auto 10px;
+    }
+    .chart-ring-inner {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80px;
+      height: 80px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .chart-ring-inner span {
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+    .overview-value {
+      font-size: 2.5em;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    .overview-label {
+      font-size: 0.9em;
+      opacity: 0.8;
+    }
+    .overview-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .overview-item:last-child {
+      border-bottom: none;
+    }
+    .overview-item .value {
+      font-weight: 600;
+    }
+    .file-list a {
+      display: block;
+      color: #007bff;
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+    .file-list .tags {
+      float: right;
+      font-size: 0.8em;
+    }
+    .file-list .tag {
+      background: #eee;
+      padding: 3px 8px;
+      border-radius: 5px;
+      margin-left: 5px;
+    }
+    .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+    }
+    .header-nav a {
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    .header-nav a:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-nav">
+    <span>Diseño 4 - Dashboard de Gastos</span>
+    <a href="index.html">← Volver a la Galería Principal</a>
+  </div>
+  <div class="design-container">
+    <div class="design-card">
+      <h2>Expenses</h2>
+      <div class="expense-value"><small>$</small>349k</div>
+      <div class="expense-change">↓ -36%</div>
+      <a href="#" class="btn-view-all">View all periods</a>
+    </div>
+    <div class="design-card">
+      <h2>Customers</h2>
+      <p>ABC Furniture</p>
+      <p>Bank West (Income: $1346.00, Expenses: $1000.00)</p>
+      <p>Media group</p>
+    </div>
+    <div class="design-card">
+      <h2>Day Week Month</h2>
+      <div class="chart-ring">
+        <div class="chart-ring-inner">
+          <span>$2000</span>
+          <small>Money Spent</small>
+        </div>
+      </div>
+      <p style="text-align:center; font-size:0.8em;">
+        <span style="color:#ffc107;">●</span> Spent
+        <span style="color:#17a2b8; margin-left:15px;">●</span> Referral
+      </p>
+    </div>
+    <div class="design-card large-area">
+      <h2>Files and additional materials</h2>
+      <div class="file-list">
+        <a href="#">Cost accounting analytics <span class="tags">@admin1 <span class="tag">Data validation</span></span></a>
+        <a href="#">Key entry <span class="tags">@admin1 <span class="tag">Dealer order</span></span></a>
+        <a href="#">Price group <span class="tags">@admin1 <span class="tag">Data validation</span></span></a>
+        <a href="#">Nomenclature in prices <span class="tags">@admin1 <span class="tag">Dealer order</span></span></a>
+      </div>
+    </div>
+    <div class="design-card purple">
+      <h2>Overview</h2>
+      <div class="overview-item">
+        <span class="overview-label">Income</span>
+        <span class="value">$590k ↑</span>
+      </div>
+      <div class="overview-item">
+        <span class="overview-label">Net Income</span>
+        <span class="value">$49k ↓</span>
+      </div>
+      <a href="#" style="color:white; text-decoration:underline; margin-top:15px; display:block;">View details</a>
+    </div>
+  </div>
+</body>
+</html>
